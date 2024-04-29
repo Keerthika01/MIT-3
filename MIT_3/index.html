@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  
+  <title>MIT 3 | Intro component with sign up form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+      <div class="container">
+
+        <div class="left">
+          <h1>Learn to code by <br> watching others</h1>
+          <p>See how experienced developers solve problems in real-time. watching scripted tutorials is great, but understanding how developers think in invaluavble.</p>
+        </div>
+
+        <div class="right">
+            <button><bold>Try it free & days</bold> then $20/mo.thereafter</button>
+            <div class="box">
+              <input type="text" id="firstName" placeholder="First Name" required>
+              <p id="alert">First Name cannot be empty</p>
+
+              <input type="text" id="lastName" placeholder="Last Name" required>
+              <p id="alert-1">Last Name cannot be empty</p>
+
+              <input type="email" id="email" placeholder="Email Address" required>
+              <p id="alert-3">Looks like this is not an email</p>
+              <input type="password" id="pass" placeholder="Password" required >
+              <p id="alert-2">Password cannot be empty</p>
+
+              <button onclick="func()">CLAIM YOUR FREE TRIAL</button>
+              <p>By clicking the button you are agreeing to our <span>Terms and Services</span></p>
+            </div>
+        </div>
+
+      </div>
+      <script>
+          
+          function func(){
+            
+          var first=document.getElementById("firstName").value;
+          var last=document.getElementById("lastName").value;
+          var code=document.getElementById("pass").value;
+          var mail=document.getElementById("email").value;
+
+          if(first==""){
+            document.getElementById("alert").style.display="block"
+            firstName.style.border=" 1px solid red"
+          }
+          if(last==""){
+            document.getElementById("alert-1").style.display="block"
+            lastName.style.border=" 1px solid red"
+          }
+          if(code==""){
+            document.getElementById("alert-2").style.display="block"
+            pass.style.border=" 1px solid red"
+          }
+          if(mail.slice(mail.length-4, mail.length)!= ".com")
+          {
+            document.getElementById("alert-3").style.display="block"
+            email.style.border=" 1px solid red"
+          }
+          }
+      </script>
+</body>
+</html>
